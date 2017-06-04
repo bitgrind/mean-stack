@@ -20,7 +20,6 @@ app.use(express.static(path.join(__dirname, 'dist')));
 app.use('/api', api);
 
 // Catch all other routes and return the index file
-//must come last if no other routes are found
 app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, 'dist/index.html'));
 });
